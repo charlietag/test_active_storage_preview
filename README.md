@@ -48,6 +48,9 @@
   * `bin/rails g scaffold Movie name:string actor:string`
   * `bin/rails g scaffold Artist name:string age:integer`
 
+* Install active_storage
+  * `bin/rails active_storage:install`
+
 
 ## config - credential
 

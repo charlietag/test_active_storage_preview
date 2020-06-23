@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Movies</h1>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="row">Name</th>
+      <th scope="row">Actor</th>
+      <th scope="row">Video Preview</th>
+      <th scope="row" colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><%= movie.name %></td>
+        <td><%= movie.actor %></td>
+        <td>
+          <% if movie.video.attached? %>
+            <% #All video type is forced to attachment (ignore inline) %>
+            <%= link_to("movie video", rails_blob_path(movie.video, disposition: "inline")) %> | 
+            <%= link_to("movie video", rails_blob_path(movie.video, disposition: "attachment")) %> | 
+            <%= link_to("movie video", url_for(movie.video)) %> | 
+            <%= image_tag movie.video.preview(resize_to_limit: [100, 100]) %>
+          <% end %>
+        </td>
+        <td><%= link_to 'Show', movie %></td>
+        <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
+        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Movie', new_movie_path %>

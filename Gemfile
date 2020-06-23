@@ -57,3 +57,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pry-rails', :group => :development
 gem 'bullet', group: 'development'
 
+
+# To enable variants (Transforming Images)
+gem 'image_processing'

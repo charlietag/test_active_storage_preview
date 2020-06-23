@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Artists</h1>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="row">Name</th>
+      <th scope="row">Age</th>
+      <th scope="row">Images</th>
+      <th scope="row" colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @artists.each do |artist| %>
+      <tr>
+        <td><%= artist.name %></td>
+        <td><%= artist.age %></td>
+        <td>
+          <% if artist.images.attached? %>
+            <% artist.images.each_with_index do |image, i| %>
+							<p> 
+								<%= link_to("image##{i}", rails_blob_path(image, disposition: "attachment")) %>
+								<%= image_tag image.variant(resize_to_limit: [100, 100]) %>
+							</p>
+						<% end %>
+          <% end %>
+        </td>
+        <td><%= link_to 'Show', artist %></td>
+        <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
+        <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Artist', new_artist_path %>
