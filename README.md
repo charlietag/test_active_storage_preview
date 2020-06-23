@@ -106,4 +106,14 @@
 
 ![prview_images.png](/screenshots/prview_images.png)
 ![prview_pdf.png](/screenshots/prview_pdf.png)
-![prview_rideo.png](/screenshots/prview_video.png)
+![prview_video.png](/screenshots/prview_video.png)
+
+## Note
+
+* Internet media type (MIME)
+  * `application/pdf`
+  * `image/*`
+  * `video/*`
+* All MIME
+  * [link](https://zh.wikipedia.org/zh-tw/%E4%BA%92%E8%81%94%E7%BD%91%E5%AA%92%E4%BD%93%E7%B1%BB%E5%9E%8B)
+	* [link](https://blog.gtwang.org/web-development/html-input-accept-attribute-tutorial/)
