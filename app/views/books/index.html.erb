@@ -20,9 +20,9 @@
         <td>
           <% if book.epub.attached? %>
             <% #inline is just like url_for %>
-              <%= link_to("book epub", rails_blob_path(book.epub, disposition: "inline")) %> | 
-              <%= link_to("book epub", rails_blob_path(book.epub, disposition: "attachment")) %> | 
-              <%= link_to("book epub", url_for(book.epub)) %> | 
+              <% #link_to("book epub", rails_blob_path(book.epub, disposition: "inline")) %>
+              <% #link_to("book epub", url_for(book.epub)) %>
+              <%= link_to("Download #{book.name}", rails_blob_path(book.epub, disposition: "attachment")) %> | 
               <%= image_tag book.epub.preview(resize_to_limit: [100, 100]) %>
           <% end %>
         </td>

@@ -20,9 +20,9 @@
         <td>
           <% if movie.video.attached? %>
             <% #All video type is forced to attachment (ignore inline) %>
-            <%= link_to("movie video", rails_blob_path(movie.video, disposition: "inline")) %> | 
-            <%= link_to("movie video", rails_blob_path(movie.video, disposition: "attachment")) %> | 
-            <%= link_to("movie video", url_for(movie.video)) %> | 
+            <% #link_to("movie video", rails_blob_path(movie.video, disposition: "inline")) %>
+            <% #link_to("movie video", url_for(movie.video)) %>
+            <%= link_to("Download #{movie.name}", rails_blob_path(movie.video, disposition: "attachment")) %> | 
             <%= image_tag movie.video.preview(resize_to_limit: [100, 100]) %>
           <% end %>
         </td>
