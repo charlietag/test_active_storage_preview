@@ -104,9 +104,12 @@
 
 ## Final Result
 
-![prview_images.png](/screenshots/preview_images.png)
-![prview_pdf.png](/screenshots/preview_pdf.png)
-![prview_video.png](/screenshots/preview_video.png)
+* Preview Images (image files)
+  * ![prview_images.png](/screenshots/preview_images.png)
+* Preview PDF (pdf files)
+  * ![prview_pdf.png](/screenshots/preview_pdf.png)
+* Preview Video (video files)
+  * ![prview_video.png](/screenshots/preview_video.png)
 
 ## Note
 
